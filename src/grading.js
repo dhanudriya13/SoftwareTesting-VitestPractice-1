@@ -31,10 +31,11 @@ export function getLetterGrade(score) {
   if (score >= 80) return "B";
   if (score >= 70) return "C";
   if (score >= 60) return "D";
+  if (score >= 30) return "E";
   return "F";
 }
 
-export function isPassing(score, passingScore = 60) {
+export function isPassing(score, passingScore = 81) {
   if (typeof score !== "number" || Number.isNaN(score)) {
     throw new TypeError("Score must be a valid number");
   }
